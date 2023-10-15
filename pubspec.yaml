@@ -41,6 +41,7 @@ dependencies:
   firebase_core:
   smooth_page_indicator:
   carousel_slider:
+  web_smooth_scroll:
 
 dev_dependencies:
   flutter_test:
@@ -60,7 +61,7 @@ dev_dependencies:
 flutter:
 
   assets:
-  - assets/pozadina1.jpeg
+  - assets/pozadina1.webp
   - assets/logo.png
   - assets/palete.png
   - assets/daske.png
@@ -69,6 +70,8 @@ flutter:
   - assets/cert/2.png
   - assets/cert/3.png
   - assets/cert/4.png
+  - assets/fav.png
+
 
 
 
