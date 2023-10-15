@@ -62,6 +62,17 @@ flutter:
   assets:
   - assets/pozadina1.jpeg
   - assets/logo.png
+  - assets/palete.png
+  - assets/daske.png
+  - assets/tr.png
+  - assets/cert/1.png
+  - assets/cert/2.png
+  - assets/cert/3.png
+  - assets/cert/4.png
+
+
+
+
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

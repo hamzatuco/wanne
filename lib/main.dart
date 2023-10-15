@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           color: Colors.transparent, // Set the app bar color to transparent
         ),
       ),
-      home: Index(),
+      home: const Index(),
       title: 'WANNE',
       debugShowCheckedModeBanner: false,
     );

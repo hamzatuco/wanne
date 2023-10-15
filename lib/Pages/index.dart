@@ -97,7 +97,7 @@ class IndexState extends State<Index> {
                                     const AssetImage('assets/pozadina1.jpeg'),
                                 fit: BoxFit.cover,
                                 colorFilter: ColorFilter.mode(
-                                  Colors.black.withOpacity(0.35),
+                                  Colors.black.withOpacity(0.5),
                                   BlendMode.srcOver,
                                 ),
                               ),
@@ -184,9 +184,9 @@ class IndexState extends State<Index> {
                                           (isWideScreen ? 150.0 : 50.0),
                                       child: Padding(
                                         padding: const EdgeInsets.only(
-                                            right: 50.0), // Add right padding
+                                            right:  50.0), // Add right padding
                                         child: Text(
-                                          'Kadir je glupglupglupglupglupglupglupglupglupglupglupglup',
+                                          'Dobrodosli u "Wanne" d.o.o., uglednu kompaniju koja se bavi preradom drveta. Naša firma ima dugogodišnje iskustvo u ovom sektoru i ponosimo se što smo postali poznati po kvalitetu naših proizvoda i usluga.',
                                           style: GoogleFonts.poppins(
                                             color: Colors.white,
                                             fontSize: 19,
@@ -209,7 +209,7 @@ class IndexState extends State<Index> {
                           bottomRight: Radius.circular(30),
                         ),
                         child: Container(
-                          height: 120,
+                          height: 100,
                           color: Colors.black.withOpacity(0.4),
                           child: Center(
                             child: isWideScreen
@@ -223,7 +223,7 @@ class IndexState extends State<Index> {
                                         ),
                                         child: Image.asset(
                                           'assets/logo.png',
-                                          width: 220,
+                                          width: 190,
                                           height: 60,
                                         ),
                                       ),
@@ -331,120 +331,573 @@ class IndexState extends State<Index> {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 40, 15, 15),
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.only(
-                      bottomRight: Radius.circular(100),
-                      topLeft: Radius.circular(100),
-                    ),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            height: 400,
-                            color: Color(0xFF048C5C).withOpacity(
-                                0.8), // Use the hex color code #048c5c
-                            child: const Center(
-                              child: Text('Ovdje idu ponude',
-                                  style: TextStyle(fontSize: 20)),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            height: 400,
-                            color: Colors
-                                .transparent, // Adjust the background color of the second half
-                            child: Image.asset(
-                                'your_image_path.jpg'), // Use your image asset path
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+             Padding(
+  padding: const EdgeInsets.fromLTRB(15, 40, 15, 15),
+  child: ClipRRect(
+    borderRadius: const BorderRadius.only(
+      bottomRight: Radius.circular(100),
+      topLeft: Radius.circular(100),
+    ),
+    child: LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        if (constraints.maxWidth < 680) {
+          // Use a Column for smaller screens
+          return Column(
+  crossAxisAlignment: CrossAxisAlignment.stretch,
+  children: [
+    
+    Container(
+      height: 400,
+        color: const Color(0xFF808080).withOpacity(0.1),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(10,20,10,10),
+        child: Padding(
+          padding: const EdgeInsets.all(32.0),
+          child: Image.asset('assets/palete.png'),
+        ),
+      ),
+    ),
+    Container(
+  height: 300,
+        color: const Color(0xFF808080).withOpacity(0.1),
+  child: Center(
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(10,0,10,0),
+          child: Text(
+            'Palete i ambalaže od drveta svih dimenzija',
+            style: GoogleFonts.poppins(
+              fontSize: 22,
+                         color: const Color.fromARGB(255, 4, 140, 92),
+          fontWeight: FontWeight.w600
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        const SizedBox(height: 16),
+
+    SizedBox(
+                                          width: 333,
+                                          child: Container(
+                  color: const Color(0xFF048C5C),
+                                            height: 3,
+                                          ),
+                                        ),
+        const SizedBox(height: 16),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20,0,20,0),
+          child: Text(
+            'S našim bogatim iskustvom i tehničkim znanjem, nudimo rješenja prilagođena vašim specifičnim potrebama. Bez obzira trebate li palete za skladište, prijevoz ili potrebe proizvodnje, ili ambalažu koja štiti vaše proizvode tijekom distribucije, mi imamo pravo rješenje za vas.',
+             style: GoogleFonts.poppins(
+              fontSize: 15,
+                         color: Colors.black,
+          fontWeight: FontWeight.w400
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ],
+    ),
+  ),
+
+    ),
+  ],
+);
+
+
+        } else {
+          // Use a Row for larger screens
+          return Row(
+  children: [
+    Expanded(
+      child: Container(
+        height: 400,
+        color: const Color(0xFF808080).withOpacity(0.1),
+        child: Padding(
+          padding: const EdgeInsets.all(32.0),
+          child: Image.asset('assets/palete.png'),
+        ),
+      ),
+    ),
+    Expanded(
+      child: Container(
+        height: 400,
+        color: const Color(0xFF808080).withOpacity(0.1),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, // Center the content vertically
+          crossAxisAlignment: CrossAxisAlignment.start, // Align the text to the left
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              child: Text(
+                'Palete i ambalaže od drveta svih dimenzija',
+                style: GoogleFonts.poppins(
+                  fontSize: 32,
+                  color: const Color(0xFF048C5C),
+                  fontWeight: FontWeight.w600,
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 40, 15, 15),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Container(
-                          height: 400,
-                          color: Colors.transparent,
-                          child: const Center(
-                            child: Text('Ovdje idu ponude',
-                                style: TextStyle(fontSize: 20)),
-                          ),
-                        ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          height: 400,
-                          color: Colors
-                              .transparent, // Adjust the background color of the second half
-                          child: Image.asset(
-                              'your_image_path.jpg'), // Use your image asset path
-                        ),
-                      ),
-                    ],
-                  ),
+                textAlign: TextAlign.left,
+              ),
+            ),
+            const SizedBox(height: 16),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10,0,50,0),
+              child: SizedBox(
+                width: 333,
+                child: Container(
+                  color: const Color(0xFF048C5C),
+                  height: 3,
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(15, 40, 15, 15),
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.only(
-                      bottomRight: Radius.circular(100),
-                      topLeft: Radius.circular(100),
-                    ),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            height: 400,
-                            color: Colors.lime.withOpacity(0.3),
-                            child: const Center(
-                              child: Text('Ovdje idu ponude',
-                                  style: TextStyle(fontSize: 20)),
-                            ),
-                          ),
-                        ),
-                        Expanded(
-                          child: Container(
-                            height: 400,
-                            color: Colors
-                                .transparent, // Adjust the background color of the second half
-                            child: Image.asset(
-                                'your_image_path.jpg'), // Use your image asset path
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+              ),
+            ),
+            const SizedBox(height: 16),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0, 50, 0),
+              child: Text(
+            'S našim bogatim iskustvom i tehničkim znanjem, nudimo rješenja prilagođena vašim specifičnim potrebama. Bez obzira trebate li palete za skladište, prijevoz ili potrebe proizvodnje, ili ambalažu koja štiti vaše proizvode tijekom distribucije, mi imamo pravo rješenje za vas.',
+             style: GoogleFonts.poppins(
+              fontSize: 15,
+                         color: Colors.black,
+          fontWeight: FontWeight.w400
+            ),
+            textAlign: TextAlign.left,
+          ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  ],
+);
+
+
+        }
+      },
+    ),
+  ),
+)
+,
+////////////////////////
+               Padding(
+  padding: const EdgeInsets.fromLTRB(15, 40, 15, 15),
+  child: ClipRRect(
+    borderRadius: const BorderRadius.only(
+      bottomRight: Radius.circular(100),
+      topLeft: Radius.circular(100),
+    ),
+    child: LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        if (constraints.maxWidth < 680) {
+          // Use a Column for smaller screens
+          return Column(
+  crossAxisAlignment: CrossAxisAlignment.stretch,
+  children: [
+    
+    Container(
+      height: 400,
+        color: const Color(0xFF808080).withOpacity(0.1),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(10,20,10,10),
+        child: Image.asset('assets/daske.png'),
+      ),
+    ),
+    Container(
+  height: 300,
+        color: const Color(0xFF808080).withOpacity(0.1),
+  child: Center(
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(10,0,10,0),
+          child: Text(
+            'Proizvodi od drveta (daske, štafle)',
+            style: GoogleFonts.poppins(
+              fontSize: 22,
+                         color: const Color.fromARGB(255, 4, 140, 92),
+          fontWeight: FontWeight.w600
+            ),
+            textAlign: TextAlign.end,
+          ),
+        ),
+        const SizedBox(height: 16),
+
+    SizedBox(
+                                          width: 333,
+                                          child: Container(
+                  color: const Color(0xFF048C5C),
+                                            height: 3,
+                                          ),
+                                        ),
+        const SizedBox(height: 16),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20,0,20,0),
+          child: Text(
+            'U našem asortimanu imamo proizvode od drveta, uključujući daske i štafle, različitih dimenzija i vrsta. Kvalitetno izrađeni proizvodi za razne potrebe i namjene.',
+             style: GoogleFonts.poppins(
+              fontSize: 15,
+                         color: Colors.black,
+          fontWeight: FontWeight.w400
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ],
+    ),
+  ),
+
+    ),
+  ],
+);
+
+
+        } else {
+          // Use a Row for larger screens
+          return Row(
+  children: [
+   
+    Expanded(
+      child: Container(
+        height: 400,
+        color: Colors.transparent,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, // Center the content vertically
+          crossAxisAlignment: CrossAxisAlignment.end, // Align the text to the left
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              child: Text(
+                          'Proizvodi od drveta (daske, štafle)',
+
+                style: GoogleFonts.poppins(
+                  fontSize: 32,
+                  color: const Color(0xFF048C5C),
+                  fontWeight: FontWeight.w600,
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
-                  child: ClipRRect(
-                    borderRadius: const BorderRadius.only(
-                      topRight: Radius.circular(100),
-                      topLeft: Radius.circular(100),
-                    ),
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            height: 1000,
-                            color: Colors.lime.withOpacity(0.3),
-                            child: const Center(
-                              child: Text('Ovdje idu ponude',
-                                  style: TextStyle(fontSize: 20)),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                textAlign: TextAlign.right,
+              ),
+            ),
+            const SizedBox(height: 16),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10,0,50,0),
+              child: SizedBox(
+                width: 333,
+                child: Container(
+                  color: const Color(0xFF048C5C),
+                  height: 3,
                 ),
+              ),
+            ),
+            const SizedBox(height: 16),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0, 50, 0),
+              child: Text(
+            'U našem asortimanu imamo proizvode od drveta, uključujući daske i štafle, različitih dimenzija i vrsta. Kvalitetno izrađeni proizvodi za razne potrebe i namjene.',
+             style: GoogleFonts.poppins(
+              fontSize: 15,
+                         color: Colors.black,
+          fontWeight: FontWeight.w400
+            ),
+            textAlign: TextAlign.right,
+          ),
+            ),
+          ],
+        ),
+      ),
+    ),
+     Expanded(
+      child: Container(
+        height: 400,
+        color: Colors.transparent,
+
+        child: Image.asset('assets/daske.png'),
+      ),
+    ),
+  ],
+);
+
+
+        }
+      },
+    ),
+  ),
+)
+,
+                 Padding(
+  padding: const EdgeInsets.fromLTRB(15, 40, 15, 15),
+  child: ClipRRect(
+    borderRadius: const BorderRadius.only(
+      bottomRight: Radius.circular(100),
+      topLeft: Radius.circular(100),
+    ),
+    child: LayoutBuilder(
+      builder: (BuildContext context, BoxConstraints constraints) {
+        if (constraints.maxWidth < 680) {
+          // Use a Column for smaller screens
+          return Column(
+  crossAxisAlignment: CrossAxisAlignment.stretch,
+  children: [
+    
+    Container(
+      height: 400,
+        color: const Color(0xFF808080).withOpacity(0.1),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(10,20,10,10),
+        child: Padding(
+          padding: const EdgeInsets.all(32.0),
+          child: Image.asset('assets/tr.png'),
+        ),
+      ),
+    ),
+    Container(
+  height: 300,
+        color: const Color(0xFF808080).withOpacity(0.1),
+  child: Center(
+    child: Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(10,0,10,0),
+          child: Text(
+                'Usluge transporta',
+            style: GoogleFonts.poppins(
+              fontSize: 22,
+                         color: const Color.fromARGB(255, 4, 140, 92),
+          fontWeight: FontWeight.w600
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        const SizedBox(height: 16),
+
+    SizedBox(
+                                          width: 333,
+                                          child: Container(
+                  color: const Color(0xFF048C5C),
+                                            height: 3,
+                                          ),
+                                        ),
+        const SizedBox(height: 16),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(20,0,20,0),
+          child: Text(
+              'Nudimo usluge transporta prilagođene vašim potrebama. Brza, sigurna i pouzdana dostava širom regije. Vaš partner za efikasan transport.',
+
+             style: GoogleFonts.poppins(
+              fontSize: 15,
+                         color: Colors.black,
+          fontWeight: FontWeight.w400
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ],
+    ),
+  ),
+
+    ),
+  ],
+);
+
+
+        } else {
+          // Use a Row for larger screens
+          return Row(
+  children: [
+    Expanded(
+      child: Container(
+        height: 400,
+        color: const Color(0xFF808080).withOpacity(0.1),
+        child: Padding(
+          padding: const EdgeInsets.all(32.0),
+          child: Image.asset('assets/tr.png'),
+        ),
+      ),
+    ),
+    Expanded(
+      child: Container(
+        height: 400,
+        color: const Color(0xFF808080).withOpacity(0.1),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center, // Center the content vertically
+          crossAxisAlignment: CrossAxisAlignment.start, // Align the text to the left
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+              child: Text(
+                'Usluge transporta',
+                style: GoogleFonts.poppins(
+                  fontSize: 32,
+                  color: const Color(0xFF048C5C),
+                  fontWeight: FontWeight.w600,
+                ),
+                textAlign: TextAlign.left,
+              ),
+            ),
+            const SizedBox(height: 16),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10,0,50,0),
+              child: SizedBox(
+                width: 333,
+                child: Container(
+                  color: const Color(0xFF048C5C),
+                  height: 3,
+                ),
+              ),
+            ),
+            const SizedBox(height: 16),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(10, 0, 50, 0),
+              child: Text(
+            'Nudimo usluge transporta prilagođene vašim potrebama. Brza, sigurna i pouzdana dostava širom regije. Vaš partner za efikasan transport.',
+             style: GoogleFonts.poppins(
+              fontSize: 15,
+                         color: Colors.black,
+          fontWeight: FontWeight.w400
+            ),
+            textAlign: TextAlign.left,
+          ),
+            ),
+          ],
+        ),
+      ),
+    ),
+  ],
+);
+
+
+        }
+      },
+    ),
+  ),
+)
+,
+ Padding(
+  padding: const EdgeInsets.fromLTRB(0, 40, 0, 20),
+  child: ClipRRect(
+    borderRadius: const BorderRadius.only(
+      topRight: Radius.circular(80),
+      topLeft: Radius.circular(80),
+    ),
+    child: Container(
+       height: null, // Auto-adjust height based on content
+
+      color: const Color(0xFF048C5C),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start, // Align text to the left
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(28.0),
+            child: Container(
+              height: 100,
+              alignment: Alignment.center,
+              child: Text('O nama', style: GoogleFonts.poppins(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold)),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width > 830 ? 140.0 : 40.0,20,MediaQuery.of(context).size.width > 830 ? 140.0 : 40.0,20),
+            child: Text(
+              'Glavna djelatnost naše tvrtke "Wanne" je prerada drveta. Imamo potpunu vertikalnu integraciju proizvodnje, što znači da cijeli proces, od prikupljanja sirovina do finalnog proizvoda, obavljamo u vlastitom prostoru. Naša tvrtka se ponosi proizvodnjom visokokvalitetnih proizvoda koji uključuju različite vrste obrađenog drveta, kao što su drvene daske, letve, oblice te mnoge druge proizvode. Također, ističemo se posebnom linijom za izradu paleta koja zadovoljava visoke standarde tržišta. \n\nU tvrtki Wanne zapošljavamo 11 stručnjaka s bogatim iskustvom u industriji prerade drveta. Naš tim čine drvopreradivači, operateri strojeva, kvalitetni kontrolori i logistički stručnjaci. Njihova stručnost i posvećenost ključni su čimbenici koji osiguravaju visoku kvalitetu naših proizvoda i usluga.\n\nPoslujemo u vlastitom proizvodnom pogonu koji je opremljen najsuvremenijim strojevima za obradu drveta. Tu je i sušara koja omogućuje optimalno sušenje drveta te termička obrada naših proizvoda kako bi se postigla trajnost i kvaliteta. Dodatno, posjedujemo vozni park s četiri kamiona koji nam omogućuju učinkovitu logistiku i brzu isporuku naših proizvoda na tržište.\n\nNaši ambiciozni planovi za budućnost usmjereni su na daljnji razvoj tvrtke Wanne. Želimo proširiti kapacitete proizvodnje kako bismo udovoljili rastućoj potražnji za našim proizvodima. U skladu s tim, imamo planove za proširenje naše proizvodnje i kontinuirano ulaganje u istraživanje i razvoj novih proizvoda.',
+              style: GoogleFonts.poppins(fontSize: 17, color: Colors.white, fontWeight: FontWeight.normal),
+            ),
+          ),
+          Padding(
+              padding: const EdgeInsets.fromLTRB(30,60,30,20),
+              child: Container(
+                height: 100,
+                alignment: Alignment.center,
+                child: Text('Dostignuća', style: GoogleFonts.poppins(fontSize: 30, color: Colors.white, fontWeight: FontWeight.bold)),
+              ),
+            ),
+             Padding(
+            padding: EdgeInsets.fromLTRB(MediaQuery.of(context).size.width > 830 ? 140.0 : 40.0,20,MediaQuery.of(context).size.width > 830 ? 140.0 : 40.0,20),
+              child: Container(
+                height: 100,
+                alignment: Alignment.center,
+                child: Text('Tvrtka "Wanne" ima ponosnu povijest kontinuiranog rasta i uspjeha. Naša posvećenost kvaliteti i održivosti dovela je do impresivnih dostignuća koja nas stavljaju u sam vrh industrije prerade drveta.Nedavno smo ostvarili značajno povećanje proizvodnje, što je rezultiralo širenjem našeg tržišta i povećanjem broja zadovoljnih klijenata. Naši proizvodi su priznati zbog vrhunske kvalitete i izdržljivosti te su postali preferirani odabir u mnogim sektorima, uključujući građevinsku i logističku industriju.Što se tiče bonitetnih ocjena, s ponosom možemo reći da smo postigli visok rang u financijskoj stabilnosti i solventnosti. Naše poslovanje je temeljeno na odgovornom financijskom upravljanju i očuvanju dugoročne održivosti. Ove impresivne bonitetne ocjene svjedoče o našoj pouzdanosti i pouzdanosti kao poslovnog partnera.Nastavit ćemo graditi na ovim dostignućima i postavljati nove standarde u industriji prerade drveta. Naša predanost kvaliteti, inovacijama i održivosti čini nas tvrtkom koju možete pouzdano birati za svoje potrebe vezane uz drvene proizvode. Hvala vam što ste dio našeg uspjeha i podržavate "Wanne" na našem putovanju prema još većem napretku i rastu.', style: GoogleFonts.poppins(fontSize: 16, color: Colors.white, fontWeight: FontWeight.normal)),
+              ),
+            ),
+            // Add images here
+          LayoutBuilder(
+  builder: (BuildContext context, BoxConstraints constraints) {
+    if (constraints.maxWidth > 600) {
+      // When the screen is wide, display the images in a row
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Image.asset('assets/cert/1.png',
+          width: 300,),
+          Image.asset('assets/cert/3.png',
+          width: 300,),
+          // Add more images as needed
+        ],
+      );
+    } else {
+      // When the screen is small, stack the images vertically
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0,10,0,10),
+              child: Image.asset('assets/cert/1.png',
+              width: 200,),
+            ),
+            Image.asset('assets/cert/3.png',
+            width: 200,),
+            // Add more images as needed
+          ],
+        ),
+      );
+    }
+  },
+)
+,
+            LayoutBuilder(
+  builder: (BuildContext context, BoxConstraints constraints) {
+    if (constraints.maxWidth > 1300) {
+      // When the screen is wide, display the images in a row
+      return Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Image.asset('assets/cert/2.png',
+          width: 600,),
+          Image.asset('assets/cert/4.png',
+          width: 600,),
+          // Add more images as needed
+        ],
+      );
+    } else {
+      // When the screen is small, stack the images vertically
+      return Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0,10,0,10),
+              child: Image.asset('assets/cert/2.png'),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0,10,0,10),
+              child: Image.asset('assets/cert/4.png',
+              width: 500,),
+            ),
+            // Add more images as needed
+          ],
+        ),
+      );
+    }
+  },
+)
+,
+        ],
+      ),
+    ),
+  ),
+)
+,
                 CarouselSlider.builder(
                   itemCount: urlImages.length,
                   itemBuilder: (context, index, realindex) {
@@ -452,13 +905,13 @@ class IndexState extends State<Index> {
                     return buildImage(urlImage, index);
                   },
                   options: CarouselOptions(
-                      height: 1000,
+                      height: 800,
                       autoPlay: true,
-                      autoPlayInterval: Duration(seconds: 3),
+                      autoPlayInterval: const Duration(seconds: 3),
                       onPageChanged: ((index, reason) =>
                           setState(() => activeIndex = index))),
                 ),
-                SizedBox(height: 12),
+                const SizedBox(height: 12),
                 const SizedBox(
                   height: 450, // Adjust the height as needed
                   child: GoogleMap(),
@@ -472,7 +925,7 @@ class IndexState extends State<Index> {
                     children: [
                       Image.asset('assets/logo.png',
                           width: 250), // Add your logo image
-                      SizedBox(height: 60),
+                      const SizedBox(height: 60),
                       Padding(
                         padding: const EdgeInsets.all(10.0),
                         child: Center(
@@ -498,12 +951,12 @@ class IndexState extends State<Index> {
                             Text(
                               'Tel.:',
                               style: GoogleFonts.poppins(
-                                color: Color(0xFF048C5C),
+                                color: const Color(0xFF048C5C),
                                 fontSize: 16,
                               ),
                             ),
                             Text(
-                              '+387 123 123 123   ',
+                              ' +387 123 123 123   ',
                               style: GoogleFonts.poppins(
                                 color: Colors.white,
                                 fontSize: 16,
@@ -512,12 +965,12 @@ class IndexState extends State<Index> {
                             Text(
                               'Fax:',
                               style: GoogleFonts.poppins(
-                                color: Color(0xFF048C5C),
+                                color: const Color(0xFF048C5C),
                                 fontSize: 16,
                               ),
                             ),
                             Text(
-                              '764853225   ',
+                              ' 764853225   ',
                               style: GoogleFonts.poppins(
                                 color: Colors.white,
                                 fontSize: 16,
@@ -526,12 +979,12 @@ class IndexState extends State<Index> {
                             Text(
                               'Email:',
                               style: GoogleFonts.poppins(
-                                color: Color(0xFF048C5C),
+                                color: const Color(0xFF048C5C),
                                 fontSize: 16,
                               ),
                             ),
                             Text(
-                              'uegyfyus',
+                              ' uegyfyus',
                               style: GoogleFonts.poppins(
                                 color: Colors.white,
                                 fontSize: 16,
@@ -549,7 +1002,7 @@ class IndexState extends State<Index> {
                             Text(
                               'Radno vrijeme:', // Set the text
                               style: GoogleFonts.poppins(
-                                color: Color(
+                                color: const Color(
                                     0xFF048C5C), // Set the text color to green (#048c5c)
                                 fontSize: 16,
                               ),
@@ -565,7 +1018,7 @@ class IndexState extends State<Index> {
                             Text(
                               'Vikend:', // Set the text
                               style: GoogleFonts.poppins(
-                                color: Color(
+                                color: const Color(
                                     0xFF048C5C), // Set the text color to green (#048c5c)
                                 fontSize: 16,
                               ),
@@ -635,7 +1088,8 @@ class IndexState extends State<Index> {
                   },
                 ),
                 ListTile(
-                  title: const Text('Lokacija'),
+                  title: const Text('Lokacija'
+                  ),
                   onTap: () {
                     // Handle the Lokacija menu item click
                     Navigator.pop(context);
@@ -652,7 +1106,7 @@ class IndexState extends State<Index> {
 }
 
 Widget buildImage(String urlImage, int index) => Container(
-      margin: EdgeInsets.symmetric(horizontal: 5),
+      margin: const EdgeInsets.symmetric(horizontal: 5),
       child: Image.network(
         urlImage, // Make sure urlImage is a valid image URL
         fit: BoxFit.cover,
@@ -660,7 +1114,7 @@ Widget buildImage(String urlImage, int index) => Container(
     );
 
 Widget buildIndicator() => AnimatedSmoothIndicator(
-      effect: ExpandingDotsEffect(dotWidth: 15, activeDotColor: Colors.blue),
+      effect: const ExpandingDotsEffect(dotWidth: 15, activeDotColor: Colors.blue),
       activeIndex: activeIndex,
       count: urlImages.length,
     );
