@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'dart:html';
 import 'package:google_maps/google_maps.dart';
-import 'dart:ui_web' as ui;
+import 'dart:ui' as ui;
 
 class GoogleMap extends StatelessWidget {
   const GoogleMap({super.key});
@@ -30,8 +30,7 @@ class GoogleMap extends StatelessWidget {
 
       Marker(MarkerOptions()
         ..position = myLatlng
-        ..map = map
-        );
+        ..map = map);
 
       return elem;
     });

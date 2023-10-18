@@ -1,5 +1,5 @@
 name: wanne
-description: A new Flutter project.
+description: Dobrodosli u "Wanne" d.o.o., uglednu kompaniju koja se bavi preradom drveta. 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -61,8 +61,10 @@ dev_dependencies:
 flutter:
 
   assets:
-  - assets/pozadina1.webp
+  - assets/pozadina1.jpg
   - assets/logo.png
+  - assets/logocrni.png
+
   - assets/palete.png
   - assets/daske.png
   - assets/tr.png
