@@ -162,7 +162,7 @@ class IndexState extends State<Index> {
                                                 right:
                                                     50.0), // Add right padding
                                             child: Text(
-                                              'Dobrodosli u "Wanne" d.o.o., uglednu kompaniju koja se bavi preradom drveta. Naša firma ima dugogodišnje iskustvo u ovom sektoru i ponosimo se što smo postali poznati po kvalitetu naših proizvoda i usluga.',
+                                              'Dobrodosli u "Wanne" d.o.o., uglednu firmu koja se bavi preradom drveta. Naša firma ima dugogodišnje iskustvo u ovom sektoru i ponosimo se što smo postali poznati po kvalitetu naših proizvoda i usluga.',
                                               style: GoogleFonts.poppins(
                                                 color: Colors.white,
                                                 fontSize: 19,
@@ -222,11 +222,11 @@ class IndexState extends State<Index> {
                                                               255, 6, 184, 121),
                                                       fontSize: 16,
                                                       fontWeight:
-                                                          FontWeight.w600,
+                                                          FontWeight.w400,
                                                     ),
                                                   ),
                                                 ),
-                                                const SizedBox(width: 25),
+                                                const SizedBox(width: 30),
                                                 TextButton(
                                                   onPressed: () async {
                                                     if (katCnt.currentContext !=
@@ -247,11 +247,11 @@ class IndexState extends State<Index> {
                                                       color: Colors.white,
                                                       fontSize: 16,
                                                       fontWeight:
-                                                          FontWeight.w600,
+                                                          FontWeight.w400,
                                                     ),
                                                   ),
                                                 ),
-                                                const SizedBox(width: 25),
+                                                const SizedBox(width: 30),
                                                 TextButton(
                                                   onPressed: () async {
                                                     Scrollable.ensureVisible(
@@ -271,11 +271,11 @@ class IndexState extends State<Index> {
                                                               255, 6, 184, 121),
                                                       fontSize: 16,
                                                       fontWeight:
-                                                          FontWeight.w600,
+                                                          FontWeight.w400,
                                                     ),
                                                   ),
                                                 ),
-                                                const SizedBox(width: 25),
+                                                const SizedBox(width: 30),
                                                 TextButton(
                                                   onPressed: () async {
                                                     Scrollable.ensureVisible(
@@ -294,11 +294,11 @@ class IndexState extends State<Index> {
                                                       color: Colors.white,
                                                       fontSize: 16,
                                                       fontWeight:
-                                                          FontWeight.w600,
+                                                          FontWeight.w400,
                                                     ),
                                                   ),
                                                 ),
-                                                const SizedBox(width: 25),
+                                                const SizedBox(width: 30),
                                                 TextButton(
                                                   onPressed: () async {
                                                     showDialog(
@@ -317,7 +317,7 @@ class IndexState extends State<Index> {
                                                               255, 6, 184, 121),
                                                       fontSize: 16,
                                                       fontWeight:
-                                                          FontWeight.w600,
+                                                          FontWeight.w400,
                                                     ),
                                                   ),
                                                 ),
@@ -423,7 +423,7 @@ class IndexState extends State<Index> {
                                             padding: const EdgeInsets.fromLTRB(
                                                 20, 0, 20, 0),
                                             child: Text(
-                                              'S našim bogatim iskustvom i tehničkim znanjem, nudimo rješenja prilagođena vašim specifičnim potrebama. Bez obzira trebate li palete za skladište, prijevoz ili potrebe proizvodnje, ili ambalažu koja štiti vaše proizvode tijekom distribucije, mi imamo pravo rješenje za vas.',
+                                              'S našim bogatim iskustvom i tehničkim znanjem, nudimo rješenja prilagođena vašim specifičnim potrebama. Bez obzira trebate li palete za skladište, prijevoz ili potrebe proizvodnje, ili ambalažu koja štiti vaše proizvode u toku distribucije, mi imamo pravo rješenje za vas.',
                                               style: GoogleFonts.poppins(
                                                   fontSize: 15,
                                                   color: Colors.black,
@@ -493,7 +493,7 @@ class IndexState extends State<Index> {
                                             padding: const EdgeInsets.fromLTRB(
                                                 10, 0, 50, 0),
                                             child: Text(
-                                              'S našim bogatim iskustvom i tehničkim znanjem, nudimo rješenja prilagođena vašim specifičnim potrebama. Bez obzira trebate li palete za skladište, prijevoz ili potrebe proizvodnje, ili ambalažu koja štiti vaše proizvode tijekom distribucije, mi imamo pravo rješenje za vas.',
+                                              'S našim bogatim iskustvom i tehničkim znanjem, nudimo rješenja prilagođena vašim specifičnim potrebama. Bez obzira trebate li palete za skladište, prijevoz ili potrebe proizvodnje, ili amba lažu koja štiti vaše proizvode u toku distribucije, mi imamo pravo rješenje za vas.',
                                               style: GoogleFonts.poppins(
                                                   fontSize: 15,
                                                   color: Colors.black,
@@ -848,7 +848,7 @@ class IndexState extends State<Index> {
                                     20),
                                 child: Text(
                                   key: namaCnt,
-                                  'Glavna djelatnost naše tvrtke "Wanne" je prerada drveta. Imamo potpunu vertikalnu integraciju proizvodnje, što znači da cijeli proces, od prikupljanja sirovina do finalnog proizvoda, obavljamo u vlastitom prostoru. Naša tvrtka se ponosi proizvodnjom visokokvalitetnih proizvoda koji uključuju različite vrste obrađenog drveta, kao što su drvene daske, letve, oblice te mnoge druge proizvode. Također, ističemo se posebnom linijom za izradu paleta koja zadovoljava visoke standarde tržišta. \n\nNaš tim čine drvopreradivači, operateri strojeva, kvalitetni kontrolori i logistički stručnjaci. Njihova stručnost i posvećenost ključni su čimbenici koji osiguravaju visoku kvalitetu naših proizvoda i usluga.\n\nPoslujemo u vlastitom proizvodnom pogonu koji je opremljen najsuvremenijim strojevima za obradu drveta. Tu je i sušara koja omogućuje optimalno sušenje drveta te termička obrada naših proizvoda kako bi se postigla trajnost i kvaliteta. Dodatno, posjedujemo vozni park s četiri kamiona koji nam omogućuju učinkovitu logistiku i brzu isporuku naših proizvoda na tržište.\n\nNaši ambiciozni planovi za budućnost usmjereni su na daljnji razvoj tvrtke Wanne. Želimo proširiti kapacitete proizvodnje kako bismo udovoljili rastućoj potražnji za našim proizvodima. U skladu s tim, imamo planove za proširenje naše proizvodnje i kontinuirano ulaganje u istraživanje i razvoj novih proizvoda.',
+                                  'Glavna djelatnost naše firme "Wanne" je prerada drveta. Imamo potpunu vertikalnu integraciju proizvodnje, što znači da cijeli proces, od prikupljanja sirovina do finalnog proizvoda, obavljamo u vlastitom prostoru. Naša firma se ponosi proizvodnjom visokokvalitetnih proizvoda koji uključuju različite vrste obrađenog drveta, kao što su drvene daske, letve, oblice te mnoge druge proizvode. Također, ističemo se posebnom linijom za izradu paleta koja zadovoljava visoke standarde tržišta. \n\nNaš tim čine drvopreradivači, operateri strojeva, kvalitetni kontrolori i logistički stručnjaci. Njihova stručnost i posvećenost ključni su faktori koji osiguravaju visoku kvalitetu naših proizvoda i usluga.\n\nPoslujemo u vlastitom proizvodnom pogonu koji je opremljen najsavremenijim strojevima za obradu drveta. Tu je i sušara koja omogućuje optimalno sušenje drveta te termička obrada naših proizvoda kako bi se postigla trajnost i kvaliteta. Dodatno, posjedujemo vozni park s četiri kamiona koji nam omogućuju učinkovitu logistiku i brzu isporuku naših proizvoda na tržište.\n\nNaši ambiciozni planovi za budućnost usmjereni su na daljnji razvoj firme Wanne. Želimo proširiti kapacitete proizvodnje kako bismo udovoljili rastućoj potražnji za našim proizvodima. U skladu s tim, imamo planove za proširenje naše proizvodnje i kontinuirano ulaganje u razvoj novih proizvoda.',
                                   style: GoogleFonts.poppins(
                                       fontSize: 17,
                                       color: Colors.white,
@@ -879,10 +879,9 @@ class IndexState extends State<Index> {
                                         : 40.0,
                                     20),
                                 child: Container(
-                                  height: 100,
                                   alignment: Alignment.center,
                                   child: Text(
-                                      'Tvrtka "Wanne" ima ponosnu povijest kontinuiranog rasta i uspjeha. Naša posvećenost kvaliteti i održivosti dovela je do impresivnih dostignuća koja nas stavljaju u sam vrh industrije prerade drveta.Nedavno smo ostvarili značajno povećanje proizvodnje, što je rezultiralo širenjem našeg tržišta i povećanjem broja zadovoljnih klijenata. Naši proizvodi su priznati zbog vrhunske kvalitete i izdržljivosti te su postali preferirani odabir u mnogim sektorima, uključujući građevinsku i logističku industriju.Što se tiče bonitetnih ocjena, s ponosom možemo reći da smo postigli visok rang u financijskoj stabilnosti i solventnosti. Naše poslovanje je temeljeno na odgovornom financijskom upravljanju i očuvanju dugoročne održivosti. Ove impresivne bonitetne ocjene svjedoče o našoj pouzdanosti i pouzdanosti kao poslovnog partnera.Nastavit ćemo graditi na ovim dostignućima i postavljati nove standarde u industriji prerade drveta. Naša predanost kvaliteti, inovacijama i održivosti čini nas tvrtkom koju možete pouzdano birati za svoje potrebe vezane uz drvene proizvode. Hvala vam što ste dio našeg uspjeha i podržavate "Wanne" na našem putovanju prema još većem napretku i rastu.',
+                                      'Firma "Wanne" ima ponosnu historiju kontinuiranog rasta i uspjeha. Naša posvećenost kvaliteti i održivosti dovela je do impresivnih dostignuća koja nas stavljaju u sam vrh industrije prerade drveta. Nedavno smo ostvarili značajno povećanje proizvodnje, što je rezultiralo širenjem našeg tržišta i povećanjem broja zadovoljnih klijenata. Naši proizvodi su priznati zbog vrhunske kvalitete i izdržljivosti te su postali preferirani odabir u mnogim sektorima, uključujući građevinsku i logističku industriju. Što se tiče bonitetnih ocjena, s ponosom možemo reći da smo postigli visok rang u financijskoj stabilnosti i solventnosti. Naše poslovanje je temeljeno na odgovornom financijskom upravljanju i očuvanju dugoročne održivosti. Ove impresivne bonitetne ocjene svjedoče o našoj pouzdanosti i pouzdanosti kao poslovnog partnera. Nastavit ćemo raditi na novim dostignućima i postavljati nove standarde u industriji prerade drveta. Naša predanost kvaliteti, inovacijama i održivosti čini nas firmom koju možete pouzdano birati za svoje potrebe vezane uz drvene proizvode.\n\nHvala vam što ste dio našeg uspjeha i podržavate "Wanne" na našem putovanju prema još većem napretku i rastu.',
                                       style: GoogleFonts.poppins(
                                           fontSize: 16,
                                           color: Colors.white,

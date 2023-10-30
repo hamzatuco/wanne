@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       home: const Index(),
-      title: 'WANNE',
+      title: 'Proizvodnja paleta i drvnih proizvoda | Wanne d.o.o.',
       debugShowCheckedModeBanner: false,
     );
   }
